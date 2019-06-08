@@ -1,0 +1,16 @@
+# RecognitionConfig
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**audio_encoding** | [**AudioEncoding**](AudioEncoding.md) |  | 
+**sample_rate_hertz** | **int** | Sample rate in Hertz of the audio data sent in all RecognitionAudio messages. Valid values are 8000-48000. 16000 is optimal. For best results, set the sampling rate of the audio source to 16000 Hz. If that is not possible, use the native sample rate of the audio source (instead of re-sampling). This field is required for all audio formats. In Text to Speech endpoint is the synthesis sample rate (in hertz) for audio and Optional. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality), unless the specified sample rate is not supported for the encoding chosen.  | [default to 16000]
+**language_code** | [**LanguageCode**](LanguageCode.md) |  | 
+**max_alternatives** | **int** | Optional Maximum number of recognition hypotheses to be returned. Specifically, the maximum number of SpeechRecognitionAlternative messages within each SpeechRecognitionResult. The server may return fewer than maxAlternatives. Valid values are 1-5. A value of 0 or 1 will return a maximum of one. If omitted, will return a maximum of one. | [optional] [default to 1]
+**profanity_filter** | **bool** | Optional If set to true, the server will attempt to filter out profanities, replacing all but the initial character in each filtered word with asterisks, e.g. \&quot;s***\&quot;. If set to false or omitted, profanities will not be filtered out. | [optional] [default to True]
+**asr_model** | [**SpeechRecognitionModel**](SpeechRecognitionModel.md) |  | [optional] 
+**language_model** | **str** | This is the language model id of a customized trained language model. You can train your own language models and then use them to recognize speech. Refer to [languagemodel/train](#languagemodel/train) for more info.    There are some pretrained language models which you can use.    Model | Description   ------------ | -------------   general | Best for audio content that is not one of the specific language models. This is the default language model and if you are not sure which one to use, simply use &#39;general&#39;.   numbers | Best for audio content that contains only spoken numbers. For examble this language model can be used for speech enabled number input fileds.   yesno | Best for audio content that contains yes or no. For examble this language model can be used to receive confirmation from user.   country | Best for audio content that contains only spoken country. For examble this language model can be used for speech enabled input fileds.   city | Best for audio content that contains only spoken city. For examble this language model      can be used for speech enabled input fileds.   career | Best for audio content that contains only spoken career names. For examble this language model can be used for speech enabled input fileds.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
