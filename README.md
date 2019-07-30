@@ -2,6 +2,8 @@
 
 [![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://bump.sh/doc/farsava)
 
+[![Build Status](https://travis-ci.com/amerandish/farsava-python-client-asyncio.svg?branch=master)](https://travis-ci.com/amerandish/farsava-python-client-asyncio)
+
 A repository for python software development kit (SDK) of Farsava API using asyncio.
 
 Farsava API: Speech Recognition and Text to Speech by applying powerful deep neural network models.
